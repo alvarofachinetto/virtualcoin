@@ -1,0 +1,28 @@
+<mat-form-field >
+    <mat-select>
+        <mat-option value="option1"></mat-option>
+        <mat-option value="option2"></mat-option>
+        <mat-option value="option3"></mat-option>
+    </mat-select>
+</mat-form-field>
+
+<h2 id="titulo">Resumo de negociações</h2>
+
+<div *ngIf="ticker">
+    <mat-card  class="card_dados_globais1">
+        <mat-list>
+            <mat-list-item>Máxima {{ticker.ticker.high}}</mat-list-item>
+            <mat-list-item>Minima {{ticker.ticker.low}} </mat-list-item>
+            <mat-list-item>Volume {{ticker.ticker.vol}}</mat-list-item>
+            <mat-list-item>Preço unit. da última negociação {{ticker.ticker.last}}</mat-list-item>
+        </mat-list>
+    </mat-card>
+    <mat-card  class="card_dados_globais2">
+        <mat-list>
+            <mat-list-item>Maior preço (24H) {{ticker.ticker.buy}}</mat-list-item>
+            <mat-list-item>Menor preço (24H) {{ticker.ticker.sell}}</mat-list-item>
+            <mat-list-item>Abertura {{ticker.ticker.open}}</mat-list-item>
+            <mat-list-item>Data {{ticker.ticker.date}}</mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>
